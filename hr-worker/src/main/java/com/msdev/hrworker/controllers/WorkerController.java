@@ -36,17 +36,15 @@ public class WorkerController {
   @GetMapping(value = "/{id}")
   public ResponseEntity<Worker> findbyId(@PathVariable Long id) {
 
-      /*
-      Código caso queira testar o circuit breaker com a api de hr-worker ativada
+    // Código caso queira testar o circuit breaker com a api de hr-worker ativada
 
-      try {
-          Thread.sleep(3000L);
-      } catch (InterruptedException e) {
-          throw new RuntimeException(e);
-      }
-      */
+    // try {
+    // Thread.sleep(3000L);
+    // } catch (InterruptedException e) {
+    // throw new RuntimeException(e);
+    // }
 
-      logger.info("PORT = " + env.getProperty("local.server.port"));
+    logger.info("PORT = " + env.getProperty("local.server.port"));
 
     Worker worker = respository.findById(id).get();
     return ResponseEntity.ok(worker);

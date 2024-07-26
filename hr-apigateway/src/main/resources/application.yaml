@@ -3,6 +3,9 @@ spring:
     name: hr-apigateway
   cloud:
     gateway:
+      httpclient:
+        connect-timeout: 10000 # Timeout de conexão em milissegundos
+        response-timeout: 10000 # Timeout de resposta em milissegundos
       routes:
         - id: hr-worker
           uri: lb://hr-worker
