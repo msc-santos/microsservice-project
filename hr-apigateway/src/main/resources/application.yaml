@@ -19,6 +19,18 @@ spring:
             - Path=/hr-payroll/**
           filters:
             - StripPrefix=1
+        - id: hr-user
+          uri: lb://hr-user
+          predicates:
+            - Path=/hr-user/**
+          filters:
+            - StripPrefix=1
+        - id: hr-oauth
+          uri: lb://hr-oauth
+          predicates:
+            - Path=/hr-oauth/**
+          filters:
+            - StripPrefix=1
 server:
   port: 8765
 
