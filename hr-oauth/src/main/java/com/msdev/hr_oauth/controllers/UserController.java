@@ -1,7 +1,6 @@
 package com.msdev.hr_oauth.controllers;
 
 import com.msdev.hr_oauth.entities.User;
-import com.msdev.hr_oauth.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
